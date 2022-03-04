@@ -1,0 +1,14 @@
+@import "../../theme/colors.module.scss";
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: $main_background;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
