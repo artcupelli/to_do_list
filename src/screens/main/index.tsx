@@ -1,4 +1,5 @@
 import React from 'react';
+import { Subtitle } from '../../components/atoms';
 
 import { Header } from '../../components/molecules';
 
@@ -12,6 +13,8 @@ const Main: React.FC = () => {
     <div className={styles['container']}>
 
       <Header />
+
+      <Subtitle>Teste</Subtitle>
 
     </div>
 
