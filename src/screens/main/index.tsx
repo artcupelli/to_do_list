@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { Title } from '../../components/atoms';
+import { IconButton, Title } from '../../components/atoms';
+
+import Icons from '../../theme/icons';
 
 import styles from './main.module.scss';
 
@@ -12,6 +14,8 @@ const Main: React.FC = () => {
     <div className={styles['container']}>
 
       <Title>Main Screen</Title>
+
+      <IconButton path={Icons.options} />
 
     </div>
 
