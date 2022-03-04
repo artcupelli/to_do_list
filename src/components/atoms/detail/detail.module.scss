@@ -1,0 +1,12 @@
+@import '../../../theme/fonts.module.scss';
+
+@import '../../../theme/colors.module.scss';
+
+
+.detail {
+    margin: 0;
+    font-family: $main;
+    font-weight: 500;
+    color: $gray;
+    font-style: italic;
+}
