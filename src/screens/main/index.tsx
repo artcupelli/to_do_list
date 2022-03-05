@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Input } from '../../components/atoms';
+
 import { Header } from '../../components/molecules';
 
 import { Tasks } from '../../components/organisms';
@@ -17,6 +19,8 @@ const Main: React.FC = () => {
         <Header />
 
         <Tasks />
+
+        <Input placeholder='Título' onChangeText={() => { }} />
       </div>
 
     </div>

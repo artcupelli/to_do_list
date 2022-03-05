@@ -1,0 +1,16 @@
+@import '../../../theme/fonts.module.scss';
+@import '../../../theme/colors.module.scss';
+
+.input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: $main;
+    font-size: 18px;
+}
+
+.input::-webkit-input-placeholder {
+    color: $gray;
+    font-style: italic;
+    font-weight: 100;
+}
