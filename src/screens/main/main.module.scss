@@ -9,6 +9,7 @@ html, body {
     background-color: $main_background;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

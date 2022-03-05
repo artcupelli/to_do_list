@@ -1,0 +1,73 @@
+@import "../../../theme/colors.module.scss";
+
+.container {
+    margin: 5px 0;
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    border: 1px solid $gray;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s all;
+
+    .left_container {
+        flex: 2;
+        display: flex;
+        align-items: center;
+    }
+
+    .right_container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: right;
+        max-width: 80px;
+        min-height: 50px;
+
+        div {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+
+            .default_priority {
+                width: 10px;
+                border: 1.5px solid $high_priority;
+                height: 10px;
+                border-radius: 20px;
+            }
+
+            .high {
+                @extend .default_priority;
+                border-color: $high_priority;
+            }
+            .normal {
+                @extend .default_priority;
+                border-color: $normal_priority;
+            }
+            .low {
+                @extend .default_priority;
+                border-color: $low_priority;
+            }
+
+            .options_container {
+                opacity: 0;
+                transition: 0.5s all;
+            }
+        }
+    }
+}
+
+.container:hover {
+    background-color: $background_light;
+    transition: 0.3s all;
+
+    .right_container {
+        div {
+            .options_container {
+                opacity: 1;
+                transition: 0.5s all;
+            }
+        }
+    }
+}
