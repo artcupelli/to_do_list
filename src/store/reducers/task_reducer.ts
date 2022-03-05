@@ -1,3 +1,5 @@
+import { TaskAction } from "../actions/task_actions";
+
 import { TaskActionsTypes } from "../actions/task_actions_types";
 
 import { TaskState } from "./task_reducer_interface";
@@ -7,7 +9,7 @@ const initialState: TaskState = {
     tasks: [],
 }
 
-const TaskReducer = (state: TaskState = initialState, action: { type: string, payload: any }): TaskState => {
+const TaskReducer = (state: TaskState = initialState, action: TaskAction): TaskState => {
 
     switch (action.type) {
 
