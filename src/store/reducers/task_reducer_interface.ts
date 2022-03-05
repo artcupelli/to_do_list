@@ -1,4 +1,4 @@
-import Task from "../../components/models/task";
+import Task from "../../models/task";
 
 export interface TaskState {
     tasks: Task[],

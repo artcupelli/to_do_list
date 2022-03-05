@@ -1,4 +1,4 @@
-import Task from "../../components/models/task";
+import Task from "../../models/task";
 
 import { TaskActionsTypes } from "./task_actions_types";
 
