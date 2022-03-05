@@ -12,4 +12,9 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .tasks_container {
+        height: 90%;
+        overflow-y: auto;
+    }
 }
