@@ -1,0 +1,27 @@
+@import '../../../theme/colors.module.scss';
+@import '../../../theme/fonts.module.scss';
+
+.default_container {
+
+    border: 1px solid $high_priority;
+    border-radius: 50px;
+    padding: 5px 20px;
+    text-align: center;
+
+    span{
+        font-family: $main;
+        font-weight: 800;
+    }
+
+}
+
+.container {
+    
+    @extend .default_container;
+}
+
+.selected_container {
+    background-color: $background_light;
+
+    @extend .default_container;
+}

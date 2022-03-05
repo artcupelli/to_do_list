@@ -14,3 +14,9 @@ $background_light: #fcefea;
 $low_priority: #0ea492;
 $normal_priority: #ffb800;
 $high_priority: #ff5c00;
+
+:export {
+    low_priority: $low_priority;
+    normal_priority: $normal_priority;
+    high_priority: $high_priority;
+}
