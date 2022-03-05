@@ -13,11 +13,6 @@ export const editTask = (newTask : Task) => ({
     payload: newTask
 });
 
-export const endTask = (taskId : number) => ({
-    type: TaskActionsTypes.END_TASK,
-    payload: taskId
-});
-
 export const deleteTask = (taskId : number) => ({
     type: TaskActionsTypes.DELETE_TASK,
     payload: taskId
