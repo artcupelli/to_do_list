@@ -2,13 +2,11 @@ import React from 'react';
 
 import { Input, Option } from '../../components/atoms';
 
-import { Header } from '../../components/molecules';
+import { Header, PriorityPicker } from '../../components/molecules';
 
 import { Tasks } from '../../components/organisms';
 
 import styles from './main.module.scss';
-
-import colors from '../../theme/colors.module.scss';
 
 
 const Main: React.FC = () => {
@@ -24,7 +22,7 @@ const Main: React.FC = () => {
 
         <Input placeholder='Título' onChangeText={() => { }} />
 
-        <Option selected value='low' color={colors['low_priority']}>TESTE</Option>
+        <PriorityPicker />
       </div>
 
     </div>
