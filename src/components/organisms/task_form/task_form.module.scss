@@ -1,0 +1,27 @@
+@import "../../../theme/colors.module.scss";
+
+.default_container {
+    background-color: $background_light;
+    border: 1px solid $gray;
+    border-radius: 10px;
+    padding: 15px;
+
+    .bottom_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 15px;
+    }
+}
+
+.container {
+    @extend .default_container;
+}
+
+.container_invisible {
+    height: 0;
+    visibility: hidden;
+    transition: 0.5s all;
+    
+    @extend .default_container;
+}

@@ -7,10 +7,15 @@ import { Icon } from '@mdi/react';
 import styles from './icon_button.module.scss';
 
 
-const IconButton: React.FC<IconButtonProps> = ({ path, color = "#9D9D9D", size = 1 }) => {
+const IconButton: React.FC<IconButtonProps> = ({
+    path,
+    color = "#9D9D9D",
+    size = 1,
+    onClick = () => { }
+}) => {
 
     return (
-        <div className={styles['container']}>
+        <div className={styles['container']} onClick={() => onClick()}>
             <Icon
                 path={path}
                 size={size}

@@ -6,10 +6,10 @@ import colors from '../../../theme/colors.module.scss';
 
 import styles from './priority_picker.module.scss';
 
+import PriorityPickerProps from './priority_picker.props';
 
-const PriorityPicker: React.FC = () => {
 
-    const [selectedOption, setSelectedOption] = useState<string>();
+const PriorityPicker: React.FC<PriorityPickerProps> = ({ selected, setSelected }) => {
 
 
     return (
@@ -18,27 +18,27 @@ const PriorityPicker: React.FC = () => {
 
             <Option
                 color={colors['low_priority']}
-                selected={selectedOption === 'low'}
+                selected={selected === 'low'}
                 value='low'
-                onClick={setSelectedOption}
+                onClick={setSelected}
             >
                 LOW
             </Option>
 
             <Option
                 color={colors['normal_priority']}
-                selected={selectedOption === 'normal'}
+                selected={selected === 'normal'}
                 value='normal'
-                onClick={setSelectedOption}
+                onClick={setSelected}
             >
                 NORMAL
             </Option>
 
             <Option
                 color={colors['high_priority']}
-                selected={selectedOption === 'high'}
+                selected={selected === 'high'}
                 value='high'
-                onClick={setSelectedOption}
+                onClick={setSelected}
             >
                 HIGH
             </Option>

@@ -1,19 +1,17 @@
 import React from 'react';
 
-import Icons from '../../../theme/icons';
-
-import { IconButton, Title } from '../../atoms';
+import {  Title } from '../../atoms';
 
 import styles from './header.module.scss';
 
+import HeaderProps from './header.props';
 
-const Header: React.FC = () => {
-    
+
+const Header: React.FC<HeaderProps> = ({ onAdd }) => {
+
     return (
         <div className={styles['container']}>
-            <Title>Tarefas</Title>
-
-            <IconButton path={Icons.plus} color="#000" size={1.5}/>
+            <Title>Tasks</Title>
         </div>
     );
 }
