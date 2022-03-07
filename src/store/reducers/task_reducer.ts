@@ -13,23 +13,26 @@ const TaskReducer = (state: TaskState = initialState, action: TaskAction): TaskS
 
     switch (action.type) {
 
+
         case TaskActionsTypes.ADD_TASK:
-            return { ...state, tasks: state.tasks.concat(action.payload) }
+
+            return { tasks: state.tasks.concat(action.payload) }
 
 
         case TaskActionsTypes.EDIT_TASK:
-            var tasks = state.tasks;
 
-            tasks.map((t) => {
-                if (t.id === action.payload.id) return action.payload;
-            })
-
-            return { ...state, tasks: tasks }
+            return {
+                tasks: state.tasks.map((t) => {
+                    if (t.id === action.payload.id) return action.payload;
+                    else return t;
+                })
+            }
 
 
         case TaskActionsTypes.DELETE_TASK:
 
             return { tasks: state.tasks.filter((t) => t.id !== action.payload) }
+
 
         default:
             return state;

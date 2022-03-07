@@ -14,7 +14,7 @@ const Tasks: React.FC = () => {
     const state = useSelector((state: TaskState) => state);
 
     console.log(state);
-    
+
 
     return (
         <div>
@@ -22,6 +22,7 @@ const Tasks: React.FC = () => {
                 state.tasks.length > 0 ?
                     state.tasks.map((task) => {
                         return <TaskCard
+                            key={task.id}
                             task={{
                                 id: task.id,
                                 done: task.done,
