@@ -30,6 +30,8 @@ const TaskForm: React.FC<TaskFormProps> = ({ }) => {
 
 
     function submitNewTask(): void {
+        if (title.length === 0) return;
+
         const task: Task = {
             id: state.tasks.length,
             date: new Date(),
@@ -46,7 +48,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ }) => {
     function clearFields(): void {
         setTitle("");
         setPriority("low");
-    }    
+    }
 
 
     return (

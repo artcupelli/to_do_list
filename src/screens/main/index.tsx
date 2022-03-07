@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
-import { Input, Option } from '../../components/atoms';
-
-import { Header, PriorityPicker } from '../../components/molecules';
+import { Header } from '../../components/molecules';
 
 import { TaskForm, Tasks } from '../../components/organisms';
 
@@ -23,9 +21,10 @@ const Main: React.FC = () => {
     <div className={styles['container']}>
 
       <div className={styles['tasks_container']}>
-        <Header onAdd={toggleFormsVisible}/>
 
         <TaskForm visible={formsVisible} />
+
+        <Header onAdd={toggleFormsVisible}/>
 
         <Tasks />
 
