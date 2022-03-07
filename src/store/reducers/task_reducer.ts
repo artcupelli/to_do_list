@@ -28,11 +28,8 @@ const TaskReducer = (state: TaskState = initialState, action: TaskAction): TaskS
 
 
         case TaskActionsTypes.DELETE_TASK:
-            tasks = state.tasks;
 
-            tasks.filter((t) => t.id !== action.payload)
-
-            return { tasks: [] }
+            return { tasks: state.tasks.filter((t) => t.id !== action.payload) }
 
         default:
             return state;
