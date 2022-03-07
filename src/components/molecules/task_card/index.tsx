@@ -10,13 +10,25 @@ import styles from './task_card.module.scss';
 
 import TaskCardProps from './task_card.props';
 
+import { useDispatch } from 'react-redux';
+
+import { deleteTask } from '../../../store/actions/task_actions';
+
+
 
 const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
+
+    const dispatch = useDispatch();
+
 
     function formatDate(): string {
         const formatedDate = moment(task.date).format("DD / MM / YYYY")
 
         return formatedDate;
+    }
+
+    function deleteThisTask(): void {        
+        dispatch(deleteTask(task.id));        
     }
 
 
@@ -30,11 +42,12 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
 
             <div className={styles['right_container']}>
                 <div>
-                    <div className={styles[task.priority]} />
-
                     <div className={styles['options_container']}>
-                        <IconButton path={Icons.options} />
+                        <IconButton path={Icons.delete} onClick={deleteThisTask} />
+                        <IconButton path={Icons.pencil} />
                     </div>
+
+                    <div className={styles[task.priority]} />
                 </div>
 
                 <Detail>{formatDate()}</Detail>

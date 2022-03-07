@@ -13,6 +13,9 @@ const Tasks: React.FC = () => {
 
     const state = useSelector((state: TaskState) => state);
 
+    console.log(state);
+    
+
     return (
         <div>
             {

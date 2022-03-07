@@ -32,7 +32,7 @@ const TaskReducer = (state: TaskState = initialState, action: TaskAction): TaskS
 
             tasks.filter((t) => t.id !== action.payload)
 
-            return { ...state, tasks: tasks }
+            return { tasks: [] }
 
         default:
             return state;
